@@ -1,0 +1,29 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.osucad.plugin.progressbar</id>
+    <name>osu! Progress Bar</name>
+    <vendor email="minetoblend@gmail.com">Marvin Schürz</vendor>
+
+    <description><![CDATA[
+      osu! themed progress bars for IJ based IDEs.
+    ]]></description>
+
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable parentId="tools"
+                                 instance="com.osucad.plugin.progressbar.settings.OsuProgressBarConfigurable"
+                                 id="com.osucad.plugin.progressbar.settings.OsuProgressBarConfigurable"
+                                 displayName="osu! Progress Bar" />
+        <applicationService serviceImplementation="com.osucad.plugin.progressbar.settings.OsuProgressBarSettings"/>
+
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.osucad.plugin.progressbar.OsuApplicationComponent"
+                  topic="com.intellij.ide.ui.LafManagerListener"/>
+        <listener class="com.osucad.plugin.progressbar.OsuApplicationComponent"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>
+</idea-plugin>
