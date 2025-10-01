@@ -1,7 +1,7 @@
 # osu! Progress Bar
 
 <!-- Plugin description -->
-osu! themed progress bars for Intellij IDEA and other Jetbrains IDEs.
+osu! themed progress bars for IntelliJ IDEA and other JetBrains IDEs.
 <!-- Plugin description end -->
 
 
